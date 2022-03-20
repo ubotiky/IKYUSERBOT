@@ -148,7 +148,7 @@ async def _(e):
     manager=True,
 )
 async def _(e):
-    xx = await e.eor("`Unmuting...`")
+    xx = await e.eor("`Unmute dulu si KONTOL ini...`")
     input = e.pattern_match.group(1).strip()
     chat = await e.get_chat()
     if e.reply_to_msg_id:
@@ -169,7 +169,7 @@ async def _(e):
         )
         await eod(
             xx,
-            f"`Successfully Unmuted` [{name}](tg://user?id={userid}) `in {chat.title}`",
+            f"`Success ya tod...` [{name}](tg://user?id={userid}) `in {chat.title}`",
             time=5,
         )
     except BaseException as m:
@@ -180,7 +180,7 @@ async def _(e):
     pattern="mute( (.*)|$)", admins_only=True, manager=True, require="ban_users"
 )
 async def _(e):
-    xx = await e.eor("`Muting...`")
+    xx = await e.eor("`Mari kita mute si KONTOL ini...`")
     input = e.pattern_match.group(1).strip()
     chat = await e.get_chat()
     if e.reply_to_msg_id:
@@ -205,7 +205,7 @@ async def _(e):
         )
         await eod(
             xx,
-            f"`Successfully Muted` {name} `in {chat.title}`",
+            f"`Success ya tod...` {name} `in {chat.title}`",
         )
     except BaseException as m:
         await xx.eor(f"`{m}`", time=5)
