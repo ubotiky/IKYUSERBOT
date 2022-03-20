@@ -288,7 +288,7 @@ async def _(e):
 
 @ultroid_cmd(pattern="ungban( (.*)|$)", fullsudo=True)
 async def _(e):
-    xx = await e.eor("`UnGbanning...`")
+    xx = await e.eor("`Ungban kasian gua sama lu tod...`")
     match = e.pattern_match.group(1).strip()
     peer = None
     if e.reply_to_msg_id:
@@ -352,7 +352,7 @@ async def _(e):
 
 @ultroid_cmd(pattern="gban( (.*)|$)", fullsudo=True)
 async def _(e):
-    xx = await e.eor("`Gbanning...`")
+    xx = await e.eor("`Gban dulu mampus lu KONTOL...`")
     reason = ""
     if e.reply_to_msg_id:
         userid = (await e.get_reply_message()).sender_id
@@ -449,7 +449,7 @@ async def gcast(event):
             event, "`Give some text to Globally Broadcast or reply a message..`"
         )
 
-    kk = await event.eor("`Globally Broadcasting Msg...`")
+    kk = await event.eor("`Sabar ANJING ngelag tod...`")
     er = 0
     done = 0
     err = ""
@@ -533,7 +533,7 @@ async def gucast(event):
         return await eor(
             event, "`Give some text to Globally Broadcast or reply a message..`"
         )
-    kk = await event.eor("`Globally Broadcasting Msg...`")
+    kk = await event.eor("`Sabar ya KONTOL ngelag Tod...`")
     er = 0
     done = 0
     if event.client._dialogs:
