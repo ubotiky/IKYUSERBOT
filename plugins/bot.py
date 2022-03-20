@@ -196,13 +196,43 @@ async def lol(ult):
     )
 
 
-@ultroid_cmd(pattern="ping$", chats=[], type=["official", "assistant"])
-async def _(event):
-    start = time.time()
-    x = await event.eor("Pong !")
-    end = round((time.time() - start) * 1000)
-    uptime = time_formatter((time.time() - start_time) * 1000)
-    await x.edit(get_string("ping").format(end, uptime))
+@ultroid_cmd(pattern="ping$")
+async def redis(pong):
+    """For .ping command, ping the userbot from any chat."""
+    await get_readable_time((time.time() - StartTime))
+    start = datetime.now()
+    ram = await edit_or_reply(pong, "**𓀐.....................................𓂸**")
+    await ram.edit("**𓀐..................................𓂸..**")
+    await ram.edit("**𓀐................................𓂸....**")
+    await ram.edit("**𓀐..............................𓂸......**")
+    await ram.edit("**𓀐............................𓂸........**")
+    await ram.edit("**𓀐..........................𓂸..........**")
+    await ram.edit("**𓀐.......................𓂸.............**")
+    await ram.edit("**𓀐.....................𓂸...............**")
+    await ram.edit("**𓀐...................𓂸.................**")
+    await ram.edit("**𓀐..................𓂸..................**")
+    await ram.edit("**𓀐................𓂸....................**")
+    await ram.edit("**𓀐..............𓂸......................**")
+    await ram.edit("**𓀐............𓂸........................**")
+    await ram.edit("**𓀐..........𓂸..........................**")
+    await ram.edit("**𓀐........𓂸............................**")
+    await ram.edit("**𓀐.......𓂸.............................**")
+    await ram.edit("**𓀐....𓂸...............................**")
+    await ram.edit("**𓀐..𓂸.................................**")
+    await ram.edit("**𓀐.𓂸..................................**")
+    await ram.edit("**𓀐𓂸...................................**")
+    await ram.edit("**𓀐.𓂸..................................**")
+    await ram.edit("**𓀐𓂸...................................**")
+    await ram.edit("**𓀐.𓂸..................................**")
+    await ram.edit("**𓂺**")
+    await asyncio.sleep(2)
+    end = datetime.now()
+    duration = (end - start).microseconds / 1000
+    user= await pong.client.get_me()
+    await pong.edit(
+        f"**➾ OWNER      :** [{user.first_name}](tg://user?id={user.id}) \n"
+        f"**➾ Kecepatan : ** %sms  \n"
+
 
 
 @ultroid_cmd(
