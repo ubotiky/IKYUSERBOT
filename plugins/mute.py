@@ -170,10 +170,10 @@ async def _(e):
         await eod(
             xx,
             f"`Success ya tod...` [{name}](tg://user?id={userid}) `in {chat.title}`",
-            time=5,
+            time=10,
         )
     except BaseException as m:
-        await xx.eor(f"`{m}`", time=5)
+        await xx.eor(f"`{m}`", time=10)
 
 
 @ultroid_cmd(
@@ -193,9 +193,9 @@ async def _(e):
         except Exception as x:
             return await xx.edit(str(x))
     else:
-        return await xx.eor(get_string("tban_1"), time=3)
+        return await xx.eor(get_string("tban_1"), time=10)
     if userid == ultroid_bot.uid:
-        return await xx.eor("`I can't mute myself.`", time=3)
+        return await xx.eor("`I can't mute myself.`", time=10)
     try:
         await e.client.edit_permissions(
             chat.id,
@@ -205,7 +205,7 @@ async def _(e):
         )
         await eod(
             xx,
-            f"`Success ya tod...` {name} `in {chat.title}`",
+            f"`Mampus lu KONTOL hahaha...` {name} `in {chat.title}`",
         )
     except BaseException as m:
-        await xx.eor(f"`{m}`", time=5)
+        await xx.eor(f"`{m}`", time=10)
