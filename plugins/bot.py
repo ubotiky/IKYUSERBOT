@@ -196,10 +196,8 @@ async def lol(ult):
     )
 
 
-@ultroid_cmd(pattern="ping$")
-async def _(pong):
-    """For .ping command, ping the userbot from any chat."""
-    await get_readable_time((time.time() - StartTime))
+@ultroid_cmd(pattern="ping$", chats=[], type=["official", "assistant"])
+async def _(event):
     start = datetime.now()
     ram = await edit_or_reply(pong, "**𓀐.....................................𓂸**")
     await ram.edit("**𓀐..................................𓂸..**")
