@@ -169,7 +169,7 @@ async def _(e):
         )
         await eod(
             xx,
-            f"`Success ya tod...` [{name}](tg://user?id={userid}) `in {chat.title}`",
+            f"`Success ya tod...` [{name}](tg://user?id={userid}) ` {chat.title}`",
             time=10,
         )
     except BaseException as m:
@@ -205,7 +205,7 @@ async def _(e):
         )
         await eod(
             xx,
-            f"`Mampus lu KONTOL hahaha...` {name} `in {chat.title}`",
+            f"`Mampus lu KONTOL hahaha...` {name} ` {chat.title}`",
         )
     except BaseException as m:
         await xx.eor(f"`{m}`", time=10)
