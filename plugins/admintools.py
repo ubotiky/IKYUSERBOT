@@ -137,27 +137,32 @@ async def dmote(ult):
     require="ban_users",
     fullsudo=True,
 )
-async def bban(ult):
-    something = await get_uinfo(ult)
-    if not something:
-        return
-    user, reason = something
+async def ban(bon):
+    me = await bon.client.get_me()
+    chat = await bon.get_chat()
+    admin = chat.admin_rights
+    creator = chat.creator
+    if not admin and not creator:
+        return await edit_or_reply(bon, NO_ADMIN)
+
+    user, reason = await get_user_from_event(bon)
     if not user:
-        return await eod(ult, get_string("ban_1"))
-    if user.id in DEVLIST:
-        return await eod(ult, get_string("ban_2"))
+        return
+    rambot = await edit_or_reply(bon, "`Kita Banned Jamed dulu ya gess!!`")
     try:
-        await ult.client.edit_permissions(ult.chat_id, user.id, view_messages=False)
-    except UserIdInvalidError:
-        return await eod(ult, get_string("adm_1"))
+        await bon.client(EditBannedRequest(bon.chat_id, user.id, BANNED_RIGHTS))
     except BadRequestError:
-        return await eod(ult, get_string("ban_3"))
-    senderme = inline_mention(await ult.get_sender())
-    userme = inline_mention(user)
-    text = get_string("ban_4").format(userme, senderme, ult.chat.title)
+        return await edit_or_reply(bon, NO_PERM)
     if reason:
-        text += get_string("ban_5").format(reason)
-    await eod(ult, text)
+        await rambot.edit(
+            r"✨ **#Banned_User** ✨"
+            f"\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n"
+            f"**User ID:** `{str(user.id)}`\n"
+            f"**Reason:** `{reason}`",
+        )
+    else:
+        await rambot.edit(
+            f"✨ **#Banned_User** ✨\n\n**First Name:** [{user.first_name}](tg://user?id={user.id})\n**User ID:** `{user.id}`\n**Action:** `Banned User
 
 
 @ultroid_cmd(
