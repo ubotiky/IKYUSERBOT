@@ -374,3 +374,41 @@ async def updava(event):
         force_document=False,
         buttons=Button.inline("Changelogs", data="changes"),
     )
+
+
+@ultroid_cmd(pattern="pink$")
+async def redis(pong):
+    """For .ping command, ping the userbot from any chat."""
+    await get_readable_time((time.time() - StartTime))
+    start = datetime.now()
+    ram = await edit_or_reply(pong, "**𓀐.....................................𓂸**")
+    await ram.edit("**𓀐..................................𓂸..**")
+    await ram.edit("**𓀐................................𓂸....**")
+    await ram.edit("**𓀐..............................𓂸......**")
+    await ram.edit("**𓀐............................𓂸........**")
+    await ram.edit("**𓀐..........................𓂸..........**")
+    await ram.edit("**𓀐.......................𓂸.............**")
+    await ram.edit("**𓀐.....................𓂸...............**")
+    await ram.edit("**𓀐...................𓂸.................**")
+    await ram.edit("**𓀐..................𓂸..................**")
+    await ram.edit("**𓀐................𓂸....................**")
+    await ram.edit("**𓀐..............𓂸......................**")
+    await ram.edit("**𓀐............𓂸........................**")
+    await ram.edit("**𓀐..........𓂸..........................**")
+    await ram.edit("**𓀐........𓂸............................**")
+    await ram.edit("**𓀐.......𓂸.............................**")
+    await ram.edit("**𓀐....𓂸...............................**")
+    await ram.edit("**𓀐..𓂸.................................**")
+    await ram.edit("**𓀐.𓂸..................................**")
+    await ram.edit("**𓀐𓂸...................................**")
+    await ram.edit("**𓀐.𓂸..................................**")
+    await ram.edit("**𓀐𓂸...................................**")
+    await ram.edit("**𓀐.𓂸..................................**")
+    await ram.edit("**𓂺**")
+    await asyncio.sleep(2)
+    end = datetime.now()
+    duration = (end - start).microseconds / 1000
+    user= await pong.client.get_me()
+    await pong.edit(
+        f"**➾ OWNER      :** [{user.first_name}](tg://user?id={user.id}) \n"
+        f"**➾ Kecepatan : ** %sms  \n"
