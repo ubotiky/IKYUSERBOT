@@ -446,7 +446,7 @@ async def gcast(event):
             msg, btn = get_msg_button(msg)
     else:
         return await eor(
-            event, "`Give some text to Globally Broadcast or reply a message..`"
+            event, "`Ngetik yang bener KONTOL...`"
         )
 
     kk = await event.eor("`Sabar ANJING ngelag tod...`")
