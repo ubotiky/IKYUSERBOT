@@ -192,7 +192,7 @@ async def lol(ult):
 @ultroid_cmd(pattern="ping$", chats=[], type=["official", "assistant"])
 async def _(event):
     start = time.time()
-    x = await event.eor("Baaa, "__Sabar KONTOL.__")
+    x = await event.eor("Baaa !,")
     await ping.edit("__Sabar KONTOL..__")
     await ping.edit("__Sabar KONTOL...__")
     await ping.edit("__Sabar KONTOL.__")
