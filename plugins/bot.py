@@ -6,22 +6,29 @@
 # <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
 """
 ✘ Commands Available
+
 • `{i}alive` | `{i}alive inline`
     Check if your bot is working.
+
 • `{i}ping`
     Check Ultroid's response time.
+
 • `{i}update`
     See changelogs if any update is available.
+
 • `{i}cmds`
     View all plugin names.
+
 • `{i}restart`
     To restart your bot.
+
 • `{i}logs (sys)`
     Get the full terminal logs.
 • `{i}logs carbon`
     Get the carbonized sys logs.
 • `{i}logs heroku`
    Get the latest 100 lines of heroku logs.
+
 • `{i}shutdown`
     Turn off your bot.
 """
@@ -45,7 +52,6 @@ try:
 except ImportError:
     LOGS.error("bot: 'gitpython' module not found!")
     Repo = None
-
 
 from telethon.utils import resolve_bot_file_id
 
@@ -90,6 +96,7 @@ buttons = [
 # Will move to strings
 alive_txt = """
 The Ultroid Userbot
+
   ◍ Version - {}
   ◍ Py-Ultroid - {}
   ◍ Telethon - {}
@@ -192,11 +199,10 @@ async def lol(ult):
 @ultroid_cmd(pattern="ping$", chats=[], type=["official", "assistant"])
 async def _(event):
     start = time.time()
-    x = await event.eor("Baaa !,")
-    end = round((time.time()end - start) * 1000)
+    x = await event.eor("Baaa !")
+    end = round((time.time() - start) * 1000)
     uptime = time_formatter((time.time() - start_time) * 1000)
     await x.edit(get_string("ping").format(end, uptime))
-
 
 
 @ultroid_cmd(
