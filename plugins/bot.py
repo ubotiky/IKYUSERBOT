@@ -191,11 +191,12 @@ async def lol(ult):
 
 @ultroid_cmd(pattern="ping$", chats=[], type=["official", "assistant"])
 async def _(event):
-    start = time.time()
-    x = await event.eor("Pong !")
-    end = round((time.time() - start) * 1000)
-    uptime = time_formatter((time.time() - start_time) * 1000)
-    await x.edit(get_string("ping").format(end, uptime))
+    start = datetime.now()
+    x = await event.eor("Pong, "`Sabar ya tod...`")
+    end = datetime.now()
+duration = (end - start).microseconds / 1000
+    uptime = time_formatter((datetime.now())
+    await x.edit(get_string("★ping").format(end, ★uptime))
 
 
 @ultroid_cmd(
